@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Contact Us</h1>
+    <form action="#"
+        style="display:block; max-width: 500px; margin:0 auto; border: 1px solid #ddd; padding: 20px; border-radius: 10px; ">
+        <!-- Person Details -->
+        <label for="#">Full Name:</label> <br>
+        <input type="text" style="padding: 10px; width:100%; margin-bottom: 10px;" placeholder="Enter your full name">
+        <br>
+        <label for="#">Email Address:</label> <br>
+        <input type="email" style="padding: 10px; width:100%; margin-bottom: 10px;" placeholder="Enter your email"> <br>
+        <label for="#">Password: </label> <br>
+        <input type="password" style="margin-bottom: 10px; width: 100%; padding: 10px;" placeholder="Create a password">
+        <br>
+        <label for="#"> Phone Number: </label> <br>
+        <input type="number" style="margin-bottom: 10px; width: 100%; padding: 10px;"
+            placeholder="Enter your phone number">
+        <br>
+
+        <!-- Gender Details -->
+        <label for="#">Gender: </label> <br>
+        <input type="radio" name="gender" value="male">
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="">Female</label> <br><br>
+
+        <!-- Interests Details -->
+        <label for="">Interests: </label> <br>
+        <input type="checkbox" value="coding">
+        <label for="">Coding</label>
+        <input type="checkbox" value="Reading">
+        <label for="#">Reading</label>
+        <input type="checkbox" value="traveling">
+        <label for="#">Traveling:</label> <br> <br>
+
+        <!-- Country: -->
+        <label for="country">Country: </label> <br>
+        <select name="country" id="country" style="margin-bottom: 10px; padding: 10px; width: 100%;">
+            <option value="usa">USA</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Afghanistan">Afghanistan</option>
+        </select>
+        <br>
+
+        <!-- Message -->
+        <label for="#">Message: </label> <br>
+        <textarea name="" id="" placeholder="write your message here...."
+            style="width: 100%; margin-bottom: 10px; padding: 10px; " rows="5"></textarea> <br>
+
+        <button type="submit"
+            style="color: white; background-color: #28A745; padding: 9px 17px; border: none; border-radius: 5px;">Submit</button>
+        <button type="submit"
+            style="padding: 9px 17px; border-radius: 5px; color: white; background-color: #DC3545; border: none;">Reset</button>
+    </form>
+
+</body>
+
+</html>
