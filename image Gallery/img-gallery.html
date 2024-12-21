@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roni Ahamed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+        }
+
+        .card img {
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Image Gallery</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="../Profile/Roni Ahamed.jpg" alt="My img">
+            <div class="caption">Image 1</div>
+        </div>
+        <div class="card">
+            <img src="../Basic-Blog/download.jpg" alt="Basic-Blog">
+            <div class="caption">Image 2</div>
+        </div>
+        <div class="card">
+            <img src="../Profile/Roni Ahamed.jpg" alt="My img">
+            <div class="caption">Image 3</div>
+        </div>
+        <div class="card">
+            <img src="../Basic-Blog/download.jpg" alt="Basic-Blog">
+            <div class="caption">Image 4</div>
+        </div>
+        <div class="card">
+            <img src="../Profile/Roni Ahamed.jpg" alt="My img">
+            <div class="caption">Image 5</div>
+        </div>
+        <div class="card">
+            <img src="../Basic-Blog/download.jpg" alt="Basic-Blog">
+            <div class="caption">Image 6</div>
+        </div>
+        <div class="card">
+            <img src="../Profile/Roni Ahamed.jpg" alt="My img">
+            <div class="caption">Image 7</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
