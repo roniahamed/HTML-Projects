@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roni Ahamed">
+    <meta charset="UTF-8">
+    <title>Simple Quiz Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .quiz-container {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .question h3 {
+            margin: 10px 0;
+        }
+
+        .option,
+        .option1 {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .option label,
+        .option input {
+            margin-bottom: 12px;
+        }
+
+        .option1 label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056B3;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Quiz</h1>
+    <div class="quiz-container">
+        <form action="#" id="quizForm">
+            <div class="question">
+                <h3 id="q1">1. What is the capital of France?</h3>
+                <div class="option1">
+
+                    <label for="Paris"> <input type="radio" id="Paris" name="q1" value="paris"> Paris</label>
+                    <label for="london"> <input type="radio" value="london" id="london" name="q1"> London</label>
+
+                    <label for="rome"> <input type="radio" id="rome" value="rome" name="q1"> Rome</label>
+
+                    <label for="berlin"><input type="radio" value="berlin" id="berlin" name="q1"> Berlin</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>2. Which is the largest planet in our solar system?</h3>
+                <div class="option">
+                    <input type="radio" name="q2" value="earth" id="e">
+                    <label for="e">Earth</label> <br>
+                    <input type="radio" name="q2" value="jupiter" id="j">
+                    <label for="j">Jupiter</label> <br>
+                    <input type="radio" value="mars" id="m" name="q2">
+                    <label for="m">Mars</label> <br>
+                    <input type="radio" value="venus" id="v" name="q2">
+                    <label for="v">Venus</label> <br>
+                </div>
+            </div>
+            <div class="question">
+                <h3>3. What does HTML stand for?</h3>
+                <div class="option">
+                    <input type="radio" name="q3" value="hml" id="hml">
+                    <label for="hml">Hypertext Markup Language</label> <br>
+                    <input type="radio" name="q3" value="html" id="html">
+                    <label for="html">Home Tool Markup Language</label> <br>
+                    <input type="radio" name="q3" value="hml1" id="hml1">
+                    <label for="hml1">Hyperlink Markup Language</label> <br>
+                    <input type="radio" name="q3" id="none" value="none">
+                    <label for="none">None of th above</label>
+                </div>
+            </div>
+            <button type="button" onclick="calculateScore()" class="submit-btn">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: "paris",
+                q2: "jupiter",
+                q3: "hml"
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+
+            for (let key in answers) {
+                const userAnswer = form[key].value;
+                if (userAnswer == answers[key]) {
+                    score++;
+                }
+            }
+            console.log(score)
+            resultDiv.textContent = `Your Score: ${score} / ${Object.keys(answers).length}`;
+        }
+    </script>
+</body>
+
+</html>
