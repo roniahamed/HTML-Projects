@@ -92,3 +92,7 @@ dmypy.json
 
 # Pyre
 .pyre/
+.mp4
+/.mp4
+mp4
+video
