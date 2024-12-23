@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .navbar ul a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #F4F4F4;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            color: #555555;
+            font-size: 18px;
+        }
+
+        .footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">RoniAhamed</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Your journey to excellence starts here!</p>
+    </div>
+    <div id="about" class="hero">
+        <h1>About Us</h1>
+        <p>We are dedicated to providing the best service in the industry</p>
+    </div>
+    <div id="services" class="hero">
+        <h1>Our Services</h1>
+        <p>Explore a wide range of services tailored to your needs</p>
+    </div>
+    <div id="contact" class="hero">
+        <h1>Contact Us</h1>
+        <p>Reach out to us for any queries or support.</p>
+    </div>
+    <footer class="footer">
+        <p>&copy;2024 My website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
